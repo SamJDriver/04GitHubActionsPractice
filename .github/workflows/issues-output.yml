@@ -1,0 +1,10 @@
+name: Issues Output
+on:
+  issues:
+    types: [opened]
+jobs:
+    checkout:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Print Output
+              run: echo "${{toJson(github)}}"
