@@ -3,8 +3,8 @@ on:
   issues:
     types: [opened]
 jobs:
-    checkout:
+    output-info:
         runs-on: ubuntu-latest
         steps:
             - name: Print Output
-              run: echo "${{toJson(github)}}"
+              run: echo "${{toJson(github.event)}}"
